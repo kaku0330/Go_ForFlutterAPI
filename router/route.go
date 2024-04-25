@@ -18,6 +18,7 @@ func Setup_Router() *gin.Engine {
 		routeAPI.POST("/userupdate", user.Update)
 		routeAPI.GET("/servey", servey.Get)
 		routeAPI.POST("/servey", servey.Post)
+		routeAPI.POST("/signup", user.Add)
 	}
 
 	return route
