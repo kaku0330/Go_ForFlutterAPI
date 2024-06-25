@@ -1,6 +1,7 @@
 package router
 
 import (
+	camereacatch "go_api/controller/camerea_catch"
 	servey "go_api/controller/satisfaction_survey"
 	user "go_api/controller/users"
 
@@ -19,6 +20,8 @@ func Setup_Router() *gin.Engine {
 		routeAPI.GET("/servey", servey.Get)
 		routeAPI.POST("/servey", servey.Post)
 		routeAPI.POST("/signup", user.Add)
+
+		routeAPI.GET("/picSocket", camereacatch.GetPic)
 	}
 
 	return route
