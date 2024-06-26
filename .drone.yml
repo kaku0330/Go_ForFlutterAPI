@@ -1,5 +1,5 @@
----
 kind: pipeline
+type: docker
 name: testing
 
 platform:
@@ -13,3 +13,13 @@ steps:
   commands:
   - echo "test1"
   - echo "test2"
+  when:
+    branch:
+    - master
+
+trigger:
+  branch:
+  - master
+  event:
+  - push
+  
