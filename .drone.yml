@@ -12,3 +12,4 @@ steps:
   image: golang:1.12-alpine
   commands:
   - echo "test1"
+  - echo "test2"
